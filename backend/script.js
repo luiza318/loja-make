@@ -1,8 +1,19 @@
-const menu = document.querySelector('.opcoes');
+const bntO = document.querySelector('.opcoes');
+const ctm = document.querySelector('.categorias-mobile');
 
-if (menu) {
-  
-}
+bntO.addEventListener('click', () => {
+  ctm.classList.toggle('ativo');
+});
+
+document.addEventListener('click', (event) => {
+  const clicouNoBotao = bntO.contains(event.target);
+
+  if (!clicouNoBotao) {
+    ctm.classList.remove('ativo');
+  }
+});
+
+
 
 const produtos = document.querySelector('.produtos');
 const botaoD = document.querySelector('.setaD');
